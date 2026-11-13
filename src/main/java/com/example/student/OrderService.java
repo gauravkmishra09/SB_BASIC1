@@ -6,14 +6,16 @@ import com.example.student.notification.SmsService;
 
 public class OrderService {
 
-    NotificationServices note = new EmailService();
-    NotificationServices nn = new SmsService();
+NotificationServices notification; //obj not created just told
 
+public OrderService(NotificationServices notification){ //dependency injection
+    this.notification= notification; // orderservice work is not obj creation
+
+}
 
     public void placeOrder(){
         System.out.println("order placed");
-        note.SentNotification();
-        nn.SentNotification();
+        notification.SentNotification();
     }
 
 }
