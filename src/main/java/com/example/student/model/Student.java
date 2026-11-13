@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 public class Student {
     @Id //ye field table ka primary key hai (har student ki unique pehchaan).
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //database 1, 2, 3 khud dega.
+    @GeneratedValue//database 1, 2, 3 khud dega.
 
 //   table ke 3 column==
     private long id;
